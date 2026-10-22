@@ -1,9 +1,16 @@
 package com.TM.CursoJava.entities;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table (name="tb_user")
 public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String password;
@@ -14,6 +21,7 @@ public class User implements Serializable {
     }
 
     public User(Integer id, String username, String password, String email, String phone) {
+
         this.id = id;
         this.username = username;
         this.password = password;
