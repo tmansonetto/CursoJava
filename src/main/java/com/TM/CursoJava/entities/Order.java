@@ -83,6 +83,14 @@ public class Order implements Serializable {
         return Objects.equals(id, order.id);
     }
 
+    public Double getTotal(){
+        double total = 0;
+        for  (OrderItem orderItem : orderItems) {
+            total = total+orderItem.getSubTotal();
+        }
+        return total;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
