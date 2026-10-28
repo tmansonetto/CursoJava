@@ -32,6 +32,10 @@ build/
 ### VS Code ###
 .vscode/
 
+###Scripts de banco###
+/.sql
+*.sql
+
 ###POSTMAN###
 .postman/
 postman/
