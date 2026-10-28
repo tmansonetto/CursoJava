@@ -39,3 +39,5 @@ build/
 ###POSTMAN###
 .postman/
 postman/
+
+src/main/resources/application-dev.properties
